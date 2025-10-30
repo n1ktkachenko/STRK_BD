@@ -1,53 +1,40 @@
-<!DOCTYPE html>
-<html lang="ru">
+```html
+<!DO CTYPE html>
+<ht ml lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>STRK Коллабы</title>
-
-  <!-- Подключаем API Bitrix -->
-  <script src="https://api.bitrix24.com/api/v1/"></script>
-
-  <style>
+<met a charset="UTF-8">
+<title>STRK Коллабы</title>
+<st yle>
     html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      background: #f5f7fa;
-      font-family: sans-serif;
-      color: #444;
+     height: 100%;
+     margin: 0;
+     padding: 20px;
+     background: #f5f7fa;
+     font-family: sans-serif;
+     color: #444;
     }
-    #loader {
-      text-align: center;
-      margin-top: 40vh;
-      font-size: 18px;
+    h1 {
+     color: #2c3e50;
     }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      display: none;
+    button {
+     background: #3498db;
+     color: white;
+     border: none;
+     padding: 12px 24px;
+     border-radius: 6px;
+     font-size: 16px;
+     margin: 10px 0;
+     cursor: pointer;
     }
-  </style>
+    button:hover {
+     background: #2980b9;
+    }
+</style>
 </head>
-
 <body>
-  <div id="loader">⏳ Загрузка приложения...</div>
-  <iframe id="appFrame"></iframe>
-
-  <script>
-    // Если Bitrix не готов — покажет ошибку в консоли
-    window.onerror = function(msg, src, line, col, err) {
-      console.error("Ошибка:", msg, "в", src, ":", line);
-    };
-
-    // Ждём инициализацию Bitrix
-    BX24.init(function() {
-      console.log("✅ BX24 подключен, загружаем приложение...");
-      const iframe = document.getElementById("appFrame");
-      iframe.src = "https://strk-bd.onrender.com/"; // <== Твоя ссылка Render
-      iframe.style.display = "block";
-      document.getElementById("loader").style.display = "none";
-    });
-  </script>
+<h1>Добро пожаловать в STRK Коллабы</h1>
+<p>Это твой дизайн — теперь он работает в Bitrix24!</p>
+<button>Пример кнопки</button>
 </body>
 </html>
+```
